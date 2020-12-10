@@ -54,6 +54,10 @@ export default class JsonViewer extends React.Component {
       // }
       this.setState({
         jsonStr: JSON.stringify(obj, null, 4),
+      }, () => {
+        this.editor.setScrollLeft(0)
+        this.editor.setPosition({lineNumber: 1, column: 1}); 
+        this.editor.focus()
       });
       localStorage.setItem(
         CACHE_KEY,
