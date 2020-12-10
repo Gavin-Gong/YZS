@@ -1,9 +1,8 @@
 import React from "react";
-import RJV from "react-json-view";
 import _ from "lodash";
 import "./JsonViewer.scss";
 import { message } from "antd";
-import { Button, Input, Textarea } from "@geist-ui/react";
+import { Button } from "@geist-ui/react";
 import MonacoEditor from 'react-monaco-editor';
 
 const CACHE_KEY = "JSON_CACHE";
@@ -112,7 +111,13 @@ export default class JsonViewer extends React.Component {
             minimap: {
               enabled: false
             },
-            inDiffEditor: true
+            inDiffEditor: true,
+            scrollbar: {
+              horizontalSliderSize: 20,
+              horizontalScrollbarSize: 20, 
+              verticalSliderSize: 20,
+              verticalScrollbarSize: 20,
+            }
           }}
           value={jsonStr}
           onChange={onEditorChange}
