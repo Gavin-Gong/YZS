@@ -1,6 +1,5 @@
 import React from "react";
 import _ from "lodash";
-import "./JsonViewer.scss";
 import { message } from "antd";
 import { Button } from "@geist-ui/react";
 import MonacoEditor from 'react-monaco-editor';
@@ -82,7 +81,7 @@ export default class JsonViewer extends React.Component {
     });
     this.editor.focus();
   };
-  editorDidMount = (editor, monaco) => {
+  editorDidMount = (editor) => {
     console.log('editorDidMount', editor);
     this.editor = editor
     editor.focus();
@@ -100,7 +99,7 @@ export default class JsonViewer extends React.Component {
       handleClear,
       editorDidMount
     } = this;
-    const { form, jsonStr } = this.state;
+    const { jsonStr } = this.state;
     return (
       <div className="json-viewer p-8 w-4/5 m-auto">
         <MonacoEditor
