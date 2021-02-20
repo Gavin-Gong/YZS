@@ -9,11 +9,10 @@
     "@testing-library/user-event": "^12.1.10",
     "antd": "^4.8.4",
     "lodash": "^4.17.20",
-    "monaco-editor": "^0.21.2",
     "node-sass": "4.14.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-monaco-editor": "^0.40.0",
+    "react-monaco-editor": "0.40.0",
     "react-scripts": "4.0.0",
     "tailwindcss": "^1.9.6",
     "web-vitals": "^0.2.4"
