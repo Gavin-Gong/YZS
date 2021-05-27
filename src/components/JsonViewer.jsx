@@ -42,14 +42,6 @@ export default class JsonViewer extends React.Component {
           }
         }
       }
-      // if (form.getPath && form.getPath.trim()) {
-      //   const getRes = _.get(obj, form.getPath);
-      //   if (_.isArray(getRes) || _.isObject(getRes)) {
-      //     obj = getRes ?? obj;
-      //   } else {
-      //     message.warn("无法取到 get 路径下的属性或者其值不是数组和对象");
-      //   }
-      // }
       this.setState({
         jsonStr: JSON.stringify(obj, null, 4),
       }, () => {
@@ -101,9 +93,9 @@ export default class JsonViewer extends React.Component {
     } = this;
     const { jsonStr } = this.state;
     return (
-      <div className="json-viewer p-8 w-4/5 m-auto">
+      <div className="json-viewer p-8 w-11/12 m-auto">
         <MonacoEditor
-          height="calc(100vh - 250px)"
+          height="calc(100vh - 150px)"
           language="json"
           theme="vs"
           options={{
